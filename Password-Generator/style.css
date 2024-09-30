@@ -35,10 +35,22 @@ body {
     margin-right: 10px;
 }
 
+#length {
+    width: 50px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.gen-area {
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .gen-password {
@@ -53,6 +65,13 @@ body {
 
 .gen-password:hover {
     background-color: #0056b3;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .display {

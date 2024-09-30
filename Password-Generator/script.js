@@ -1,5 +1,11 @@
 document.querySelector('.gen-password').addEventListener('click', function() {
-    const length = document.getElementById('length').value;
+    const length = document.getElementById('length');
+
+    if(length.value < length.min){
+        alert('Password length must be greater than ' + length.min);
+        return;
+    }
+
     const includeUppercase = document.getElementById('cb-uc').checked;
     const includeLowercase = document.getElementById('cb-lc').checked;
     const includeSpecialChars = document.getElementById('cb-sc').checked;
@@ -19,7 +25,7 @@ document.querySelector('.gen-password').addEventListener('click', function() {
     if (includeSpecialChars) charSet += specialChars;
 
     let password = '';
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < length.value; i++) {
         const randomIndex = Math.floor(Math.random() * charSet.length);
         password += charSet[randomIndex];
     }
