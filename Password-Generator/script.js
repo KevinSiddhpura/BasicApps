@@ -1,7 +1,7 @@
 document.querySelector('.gen-password').addEventListener('click', function() {
     const length = document.getElementById('length');
 
-    if(length.value < length.min){
+    if(parseInt(length.value) < length.min){
         alert('Password length must be greater than ' + length.min);
         return;
     }
@@ -25,7 +25,7 @@ document.querySelector('.gen-password').addEventListener('click', function() {
     if (includeSpecialChars) charSet += specialChars;
 
     let password = '';
-    for (let i = 0; i < length.value; i++) {
+    for (let i = 0; i < parseInt(length.value); i++) {
         const randomIndex = Math.floor(Math.random() * charSet.length);
         password += charSet[randomIndex];
     }
