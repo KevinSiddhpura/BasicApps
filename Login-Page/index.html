@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <span>Login to Continue</span>
+    <div class="container">
+        <div class="image">
+            <img src="images/user.png" alt="User Icon">
+        </div>
+        <div class="form">
+            <div class="form-group">
+                <label for="userOrMail">Username/Email</label>
+                <input type="text" id="userOrMail">
+                <div id="user-error" class="error-message">Please enter your username or email.</div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <div id="password-error" class="error-message">Please enter your password.</div>
+            </div>
+            <div class="loginOrHelp">
+                <button onclick="validateForm()" type="submit">Login</button>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
