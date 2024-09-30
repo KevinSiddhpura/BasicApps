@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.main {
+    margin-top: 20px;
+}
+
+.cps-options {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cps-options select,
+.cps-options button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cps-options button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.click-area {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    height: 200px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.click-area .initial {
+    font-size: 20px;
+    color: #888;
+}
+
+.click-area.active {
+    box-shadow: inset 0 0 10px rgba(1, 1, 1, 0.5);
+}
+
+.cps-result {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.info {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.info-text {
+    font-size: 16px;
+    color: #888;
+}
+
+.click-area.active {
+    animation: clickAreaClickAnimation 0.1s ease infinite;
+}
+
+@keyframes clickAreaClickAnimation {
+    0% {
+        box-shadow: inset 0 0 20px rgba(1, 1, 1, 0.5);
+    }
+
+    100% {
+        box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.5);
+    }
+}
