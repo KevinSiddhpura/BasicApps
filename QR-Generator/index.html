@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>QR Code Generator</h1>
+
+        <label for="qr-type">Select QR Code Type</label>
+        <select id="qr-type" onchange="handleInputs()">
+            <option value="url">URL Redirect</option>
+            <option value="contact">Contact Details</option>
+            <option value="location">Location</option>
+        </select>
+
+        <div id="url-input" class="input-section">
+            <label for="url">Enter URL</label>
+            <input type="text" id="url" placeholder="https://me.kwin.in" />
+        </div>
+
+        <div id="contact-input" class="input-section" style="display: none;">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Kevin Siddhpura" />
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" placeholder="+1234567890" />
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="siddhpurakevin@gmail.com" />
+        </div>
+
+        <div id="location-input" class="input-section" style="display: none;">
+            <label for="latitude">Latitude</label>
+            <input type="text" id="latitude" placeholder="Enter Latitude" />
+            <label for="longitude">Longitude</label>
+            <input type="text" id="longitude" placeholder="Enter Longitude" />
+        </div>
+
+        <button onclick="generateQRCode()">Generate QR Code</button>
+
+        <div class="qr-code" id="qr-code">
+        </div>
+
+        <div class="info">Created by KevinSiddhpura</div>
+    </div>
+</body>
+
+</html>
