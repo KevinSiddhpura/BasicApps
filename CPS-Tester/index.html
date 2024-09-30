@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPS Tester</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">CPS Tester</h1>
+        <hr>
+        <div class="main">
+            <ul class="cps-options">
+                <li>
+                    <select name="timer" id="select-time">
+                        <option value="1">1 Second</option>
+                        <option value="5">5 Seconds</option>
+                        <option value="10">10 Seconds</option>
+                        <option value="15">15 Seconds</option>
+                        <option value="30">30 Seconds</option>
+                        <option value="60">60 Seconds</option>
+                    </select>
+                </li>
+                <li>
+                    <button type="button" class="reset-btn">Reset</button>
+                </li>
+            </ul>
+            <div class="click-area">
+                <p class="cps-result hidden"><span class="click-count">0</span> Clicks [<span class="cps">0</span> CPS]
+                </p>
+                <div class="initial">
+                    Start Clicking Here!
+                </div>
+            </div>
+            <div class="info">
+                <p class="info-text">
+                    Clicks Per Second (CPS) is a fun way to test your clicking speed. Click as fast as you can for the
+                    selected time and see how many clicks you can make in a second. Good luck!
+                    <hr>
+                    <strong>Created by:</strong> <a href="https://github.com/KevinSiddhpura" target="_blank">Kevin
+                        Siddhpura</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
