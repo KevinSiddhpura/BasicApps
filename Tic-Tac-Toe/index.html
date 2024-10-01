@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="status" class="status">Player X's turn</div>
+
+        <div class="grid">
+            <div class="cell" id="cell0" onclick="handleClick(0)"></div>
+            <div class="cell" id="cell1" onclick="handleClick(1)"></div>
+            <div class="cell" id="cell2" onclick="handleClick(2)"></div>
+            <div class="cell" id="cell3" onclick="handleClick(3)"></div>
+            <div class="cell" id="cell4" onclick="handleClick(4)"></div>
+            <div class="cell" id="cell5" onclick="handleClick(5)"></div>
+            <div class="cell" id="cell6" onclick="handleClick(6)"></div>
+            <div class="cell" id="cell7" onclick="handleClick(7)"></div>
+            <div class="cell" id="cell8" onclick="handleClick(8)"></div>
+        </div>
+
+        <button id="restartButton" onclick="restartGame()">Restart Game</button>
+
+        <div class="footer">
+            <p>
+                Created by <a href="https://github.com/KevinSiddhpura">KevinSiddhpura</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
