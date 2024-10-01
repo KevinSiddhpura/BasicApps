@@ -1,7 +1,8 @@
-document.querySelector('.gen-password').addEventListener('click', function() {
+document.querySelector('.gen-password').addEventListener('click', function () {
     const length = document.getElementById('length');
-
-    if(parseInt(length.value) < length.min){
+    const toInclude = document.getElementById('include').value;
+    
+    if (parseInt(length.value) < length.min) {
         alert('Password length must be greater than ' + length.min);
         return;
     }
@@ -30,10 +31,15 @@ document.querySelector('.gen-password').addEventListener('click', function() {
         password += charSet[randomIndex];
     }
 
+    if (toInclude && toInclude.length > 0) {
+        const insertAt = Math.floor(Math.random() * password.length);
+        password = password.slice(0, insertAt) + toInclude + password.slice(insertAt);
+    }
+
     document.getElementById('password').value = password;
 });
 
-document.querySelector('.copy-password').addEventListener('click', function() {
+document.querySelector('.copy-password').addEventListener('click', function () {
     const passwordField = document.getElementById('password');
     passwordField.select();
     document.execCommand('copy');

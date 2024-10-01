@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #1f2933;
     margin: 0;
     padding: 0;
     display: flex;
@@ -22,21 +22,51 @@ body {
     margin-bottom: 20px;
 }
 
-.checks ul {
-    list-style: none;
-    padding: 0;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.checks li {
-    margin-bottom: 10px;
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
-.checks label {
-    margin-right: 10px;
+td {
+    cursor: default;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+input[type="checkbox"] {
+    width: 100px;
+    height: 20px;
 }
 
 #length {
-    width: 50px;
+    width: 100px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#include {
+    width: 100px;
     padding: 6px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -98,4 +128,15 @@ body {
 
 .copy-password:hover {
     background-color: #218838;
+}
+
+.footer {
+    padding: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.footerText {
+    text-align: center;
+    color: #333;
 }

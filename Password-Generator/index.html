@@ -16,24 +16,43 @@
         <div class="main">
             <div>
                 <div class="checks">
-                    <ul>
-                        <li>
-                            <label for="cb-uc">Uppercase •</label>
-                            <input type="checkbox" name="uc" id="cb-uc">
-                        </li>
-                        <li>
-                            <label for="cb-uc">Lowercase •</label>
-                            <input type="checkbox" name="lc" id="cb-lc" checked="true">
-                        </li>
-                        <li>
-                            <label for="cb-uc">Special Chars •</label>
-                            <input type="checkbox" name="sc" id="cb-sc">
-                        </li>
-                        <li>
-                            <label for="length">Length •</label>
-                            <input type="number" name="length" id="length" min="5" value="5">
-                        </li>
-                    </ul>
+                    <table>
+                        <tr>
+                            <td>Uppercase</td>
+                            <td>
+                                <input type="checkbox" name="uc" id="cb-uc">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Lowercase</td>
+                            <td>
+                                <input type="checkbox" name="lc" id="cb-lc" checked="true">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Special Chars</td>
+                            <td>
+                                <input type="checkbox" name="sc" id="cb-sc">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Pass Length</td>
+                            <td>
+                                <input type="number" name="length" id="length" min="5" value="5">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Must Include</td>
+                            <td>
+                                <input type="text" name="include" id="include" value="">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="gen-area">
@@ -44,6 +63,11 @@
                     <input type="text" name="password" id="password" readonly>
                     <button class="copy-password">Copy</button>
                 </div>
+            </div>
+            <div class="footer">
+                <p class="footerText">
+                    Created by KevinSiddhpura
+                </p>
             </div>
         </div>
 </body>
