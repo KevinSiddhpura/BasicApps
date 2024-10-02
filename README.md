@@ -7,6 +7,7 @@
 | `3`    | Login Page         |
 | `4`    | QR Generator       |
 | `5`    | Tic Tac Toe        |
+| `6`    | Snake Game         |
 ---
 
 More to come!
