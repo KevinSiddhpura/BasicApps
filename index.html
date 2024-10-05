@@ -4,35 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Projects</title>
+    <title>Modern Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #1f2933;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 5px;
+            margin-top: 20px;
         }
 
         th,
         td {
-            padding: 12px;
+            padding: 15px;
             border: 1px solid #ddd;
             text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-            color: #333;
         }
 
         tr:nth-child(even) {
@@ -40,35 +53,81 @@
         }
 
         tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
-            text-align: center;
+            background-color: #e0e0e0;
+            transition: background-color 0.3s;
         }
 
         a {
             text-decoration: none;
-            color: #007BFF;
-            font-size: 18px;
+            color: #00ccff;
             transition: color 0.3s;
         }
 
         a:hover {
-            color: #0056b3;
+            color: #0062ca;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .dark-mode {
+            background-color: #1f2933;
+            color: #fff;
+        }
+
+        .toggle-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .toggle-switch input {
+            display: none;
+        }
+
+        .toggle-switch label {
+            cursor: pointer;
+            text-align: center;
+            background-color: #ccc;
+            border-radius: 20px;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-switch input:checked+label {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container.dark-mode table {
+            background-color: #2d3748;
+        }
+
+        .container.dark-mode tr:nth-child(even) {
+            background-color: #4a5568;
+        }
+
+        .container.dark-mode tr:hover {
+            background-color: #718096;
+        }
+
+        .container.dark-mode th,
+        .container.dark-mode td {
+            color: #e2e8f0;
+            border-color: #4a5568;
         }
     </style>
 </head>
 
-<body>
-    <div class="container">
-        <h1>Basic Projects</h1>
+<body class="dark-mode">
+    <div class="toggle-switch">
+        <input type="checkbox" id="mode-switch">
+        <label for="mode-switch">Dark Mode</label>
+    </div>
+    <div class="container dark-mode">
+        <h1>My Projects</h1>
         <table>
             <thead>
                 <tr>
@@ -77,7 +136,6 @@
                     <th>Description</th>
                 </tr>
             </thead>
-
             <tbody>
                 <tr>
                     <td>1</td>
@@ -117,14 +175,27 @@
             </tbody>
         </table>
         <div class="footer">
-            <br>
-            <hr>
-            These are some basic projects to get started with web development.
             <hr>
             Created by <a href="https://github.com/KevinSiddhpura">KevinSiddhpura</a>
             <hr>
         </div>
     </div>
+
+    <script>
+        const modeSwitch = document.getElementById('mode-switch');
+        const body = document.body;
+        const container = document.querySelector('.container');
+
+        modeSwitch.addEventListener('change', () => {
+            if (modeSwitch.checked) {
+                body.classList.add('dark-mode');
+                container.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                container.classList.remove('dark-mode');
+            }
+        });
+    </script>
 </body>
 
 </html>
