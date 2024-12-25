@@ -8,6 +8,7 @@
 | `4`    | QR Generator       |
 | `5`    | Tic Tac Toe        |
 | `6`    | Snake Game         |
+| `7`    | Weather App        |
 ---
 
 More to come!
