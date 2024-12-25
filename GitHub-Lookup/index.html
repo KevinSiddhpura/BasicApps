@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>GitHub Lookup</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>GitHub-Lookup</h1>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Example: KevinSiddhpura" />
+            <button class="search"><i class="fa-solid fa-search"></i></button>
+        </div>
+        <div class="err404 hidden">
+            <img src="images/404.png" alt="404.png">
+            <p>
+                Mentioned user not found on GitHub
+            </p>
+        </div>
+        <div class="card hidden">
+            <div class="card-header">
+                <img src="" class="card-avatar">
+                <div class="card-info">
+                    <span class="card-username"></span>
+                    <span class="card-bio"></span>
+                </div>
+            </div>
+            <div class="card-stats">
+                <div class="stat">
+                    <span class="card-repos"></span>
+                    <div>
+                        <i class="fa-solid fa-file"></i>
+                        <span class="stat-label">Repos</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="card-followers"></span>
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                </div>
+                <div class="stat">
+                    <span class="card-following"></span>
+                    <div>
+                        <i class="fa-solid fa-users"></i>
+                        <span class="stat-label">Following</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-actions">
+                <a href="" target="_blank" class="btn btn-primary card-blog">View Blog</a>
+                <a href="" target="_blank" class="btn btn-secondary card-profile">View Profile</a>
+            </div>
+
+            <script src="https://kit.fontawesome.com/177d47cc3b.js" crossorigin="anonymous"></script>
+            <script src="script.js"></script>
+</body>
+
+</html>
