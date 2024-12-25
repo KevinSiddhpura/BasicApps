@@ -14,7 +14,6 @@ body {
     justify-content: center;
     background: #1f2933;
     font-family: 'Roboto', sans-serif;
-    transition: 0.6s ease-out;
 }
 
 footer {
@@ -59,6 +58,7 @@ footer a:hover {
     padding: 28px 32px;
     overflow: hidden;
     border-radius: 18px;
+    transition: 0.6s ease-out;
 }
 
 .search-box {
