@@ -9,6 +9,7 @@
 | `5`    | Tic Tac Toe        |
 | `6`    | Snake Game         |
 | `7`    | Weather App        |
+| `8`    | GitHub Lookup      |
 ---
 
 More to come!
